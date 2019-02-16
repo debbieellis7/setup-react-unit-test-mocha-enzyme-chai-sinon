@@ -1,0 +1,47 @@
+{
+  "name": "setup-react-unit-test-mocha-enzyne-chai-sison",
+  "version": "1.0.0",
+  "description": "2018 Minimal React Webpack Babel Setup with Unit testing library Mocha, Enzyne, Chai, Sison",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "test:unit": "mocha --require @babel/register --require ./test/helpers.js --require ./test/dom.js --require ignore-styles \"./test/**/*.spec.js\"",
+    "test:unit:watch": "npm run test:unit -- --watch"
+  },
+  "keywords": [],
+  "author": "Debbie Ellis",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "chai": "^4.2.0",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "ignore-styles": "^5.0.1",
+    "jsdom": "^13.2.0",
+    "mocha": "^5.2.0",
+    "react-hot-loader": "^4.6.5",
+    "sinon": "^7.2.3",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
+  }
+}
